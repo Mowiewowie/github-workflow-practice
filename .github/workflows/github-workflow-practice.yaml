@@ -1,0 +1,19 @@
+name: Basic Workflow
+
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      name:
+        description: 'Your name'
+        default: 'Mowie-Engineers'
+        required: true
+        type: string
+
+jobs:
+  myWorkflow:
+    runs-on: ubuntu-latest
+    steps:
+      name: Display Enginner
+      run: |
+        echo "Engineer ${{ github.event.inputs.name }} ran the workflow"
