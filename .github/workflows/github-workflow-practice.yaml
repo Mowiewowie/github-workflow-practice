@@ -14,6 +14,5 @@ jobs:
   myWorkflow:
     runs-on: ubuntu-latest
     steps:
-      name: Display Enginner
       run: |
         echo "Engineer ${{ github.event.inputs.name }} ran the workflow"
